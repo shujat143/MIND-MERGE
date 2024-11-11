@@ -1,0 +1,75 @@
+.footer {
+    background-color: #81A263;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-info h3, .footer-social h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .footer-info p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .footer-social .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #000000;
+  }
+  
+  .footer-bottom {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+  }
+
+
+  /* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+      gap: 1rem; /* Reduce gap on medium screens */
+  }
+  .footer-info p,
+  .footer-bottom {
+      font-size: 0.85rem; /* Slightly smaller text */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+      padding: 1.5rem 1rem; /* Reduce padding on small screens */
+  }
+  .footer-info h3,
+  .footer-social h3 {
+      font-size: 1rem; /* Adjust header size for readability */
+  }
+  .footer-info p,
+  .footer-bottom {
+      font-size: 0.8rem; /* Further reduce text size */
+  }
+  .social-icons a {
+      font-size: 1.3rem; /* Adjust icon size */
+  }
+}
+  

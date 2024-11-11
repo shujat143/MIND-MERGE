@@ -1,0 +1,206 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg,#81A263, #81A263);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    animation: slideIn 1s forwards;
+    opacity: 0;
+    margin-left: 10px;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 15px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #010507;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-box input {
+    padding: 0.5rem;
+    border: 0.3px solid;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+  }
+  
+  .search-box button {
+    padding: 0.5rem;
+    border: none;
+    background-color: #81A263;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  
+  .search-box button:hover {
+    background-color: #5e7b43;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .icon {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-right: 10px;
+  }
+  
+  .social-icons .icon {
+    color: #f7f8f4;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons .icon:hover {
+    color: #101010;
+  }
+
+  /* Add border animation on hover using ::after pseudo-element */
+.nav-links li a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Position the line just below the text */
+  width: 0;
+  height: 3px; /* Thickness of the line */
+  background-color: #0f0f0f;
+  transition: width 0.4s ease; /* Animation for the left-to-right effect */
+}
+
+.nav-links li a:hover::after {
+  width: 100%; /* Expands the line from left to right */
+}
+
+.nav-links li a:hover {
+  color: #010507; /* Color change on hover */
+}
+/* Increase social media icon size on hover */
+.social-icons .icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+  transform: scale(1.2); /* Increases the icon size by 20% */
+  color: #101010; /* Optional color change on hover */
+}
+  
+  .icon:hover {
+    color: #000000;
+    background: linear-gradient(45deg, #000000, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Navbar default styles remain as they are */
+
+/* Responsive styling for screens smaller than 768px */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  /* Center the logo at the top */
+  .logo {
+    margin-left: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  /* Hide the search box by default, display a search icon */
+  .search-box {
+    display: none;
+  }
+
+  /* Toggle navigation links to stack vertically */
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* Increase the font size slightly for better readability */
+  .nav-links li a {
+    font-size: 1.2rem;
+  }
+
+  /* Social icons centered and spaced apart */
+  .social-icons {
+    margin-top: 1rem;
+  }
+}
+
+/* Extra small screen adjustments (less than 480px) */
+@media (max-width: 480px) {
+  /* Increase padding for better touch accessibility */
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .social-icons .icon {
+    font-size: 1.3rem;
+  }
+}
+
+  
